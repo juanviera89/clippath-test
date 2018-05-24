@@ -1,0 +1,67 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+  <button ion-button absolute-drag (click)="drawPage()">Drag Me!</button>
+</ion-header>
+
+<ion-content>
+    
+    <div id="menu">
+        <p> MEnu de pablo
+        <br> super sencillo</p>
+        <svg  id="Layer_1" >
+          <defs>
+            <clipPath id="svgPath" clipPathUnits="objectBoundingBox">
+              <!-- <clipPath clipPathUnits="objectBoundingBox" ... >
+Then all your path coordinates should be defined in the range 0..1. -->
+                <path  id="XMLID_8_" d="M 0,  0 v 1 h 0.002 c 0 , 0 , 0 -.192 ,0.003 -0.251 S 0.021  , 0.606 , 0.021 , 0.50 S 0.008 , 0.306 , 0.005 , 0.249 S 0.002 , 0 , 0.002 , 0 H 0 z"/>
+              
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+     <!--  <svg viewBox="0 0 329.6667 86"> 
+          <clipPath id="cloud02" clipPathUnits="objectBoundingBox"
+           transform="scale(0.003033 0.0116279)">
+            <path d="…(coordinates go here)…"/>
+          </clipPath>
+        </svg> -->
+  <!-- Those two values are 1/329.6667 and 1/86, respectively, and they effectively scale every point in the d attribute to fit into the needed 0–1 range. Thus we have an SVG clipping path that scales with the element and fits to its dimensions! -->
+
+  <div class="action-button" (click)="gotoPAge()">
+    <div class="btn-color"></div>
+    <div class="btn-txt"> Accion </div>
+  </div>
+  <div id="fab_cnt2" [class.active]="menuactive" [class.inactive]="!menuactive" >
+
+    <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+      <style type="text/css">
+        .st0{fill:#A0D39D;}
+        .st1{fill:none;}
+      </style>
+      <circle clipPathUnits="objectBoundingBox"  id="XMLID_1_" class="st0" cx="50" cy="50" r="43.7" (click)="menuactive = !menuactive;"/>
+      <path clipPathUnits="objectBoundingBox" class="" id="path-text1" class="st1" d="M50,95.2C25.1,95.2,4.8,74.9,4.8,50S25.1,4.8,50,4.8S95.2,25.1,95.2,50"/>
+      <text clipPathUnits="objectBoundingBox"  class="circle-text" id="XMLID_3_"><textPath  xlink:href="#path-text1" startOffset="34.196%">
+      <tspan  style="font-family:'MyriadPro-Regular'; font-size:6.4521px;">Boton1</tspan></textPath>
+      </text>
+      <path clipPathUnits="objectBoundingBox" class="" id="path-text2" class="st1" d="M50,95.2C25.1,95.2,4.8,74.9,4.8,50S25.1,4.8,50,4.8S95.2,25.1,95.2,50"/>
+      <text clipPathUnits="objectBoundingBox" class="circle-text"  id="XMLID_4_"><textPath  xlink:href="#path-text2" startOffset="45.2474%">
+      <tspan  style="font-family:'MyriadPro-Regular'; font-size:6.4521px;">Boton2</tspan></textPath>
+      </text>
+      <path clipPathUnits="objectBoundingBox" class="" id="path-text3" class="st1" d="M50,95.2C25.1,95.2,4.8,74.9,4.8,50S25.1,4.8,50,4.8S95.2,25.1,95.2,50"/>
+      <text clipPathUnits="objectBoundingBox" (click)="gotoPAge()" class="circle-text"  id="XMLID_5_"><textPath  xlink:href="#path-text3" startOffset="56.9987%">
+      <tspan  style="font-family:'MyriadPro-Regular'; font-size:6.4521px;">Boton3</tspan></textPath>
+      </text>
+    </svg>
+  </div>
+  
+  
+  
+</ion-content> 
+
+<div class="transition-color" [class.pushpage]="goto" ></div> 

@@ -1,0 +1,19 @@
+page-other {
+    .transition-color{
+        //display: none;
+        z-index: 9999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3%;
+        height: 150%;
+        background-color: #2d2444;
+        transition: all 0.5s linear;
+
+    }
+    .transition-color.pushpage{
+        //display:block;
+        //transition: all 2s linear;
+        width: 100%;
+    }
+}

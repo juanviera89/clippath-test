@@ -1,0 +1,215 @@
+page-home {
+    #Layer_1{
+        height: 100%;
+        //width: 100%;
+    }
+
+    #XMLID_8_{
+        transition: 1s;
+
+    }
+    #menu:hover #XMLID_8_{
+        d: path("M0,0v1h0.021c0,0,0-0.192,0.037-0.251s0.20-0.144,0.20-0.249S0.095,0.306,0.058,0.249S0.021,0,0.021,0H0z");
+    }
+    #menu{
+        background-color: pink;
+        display:flex;
+        align-items:center;
+        text-align: left;
+        clip-path: url(#svgPath);
+        width: 100%;
+        height: 100%;
+        
+    }
+    ion-header{
+        button{
+            position: absolute !important;
+        }
+    }
+    .action-button{
+        width: 60%;
+        height: 3em;
+        margin: auto;
+        left: 0;
+        right: 0;
+        display:flex;
+        align-items:center;
+        .btn-color{
+            width: 10%;
+            height: 100%;
+            background-color: #2d2444;
+            transition: 2s;
+        }
+    }
+    .transition-color{
+        //display: none;
+        z-index: 9999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 150%;
+        background-color: #2d2444;
+        transition: all 0.5s linear;
+
+    }
+    .transition-color.pushpage{
+        //display:block;
+        //transition: all 2s linear;
+        width: 100%;
+    }
+
+    #fab_cnt2{
+        position: fixed;
+        bottom: -100px;
+        right: -100px;
+        height:200px;
+        width: 200px;
+        transform-origin: 50% 50%;
+        .circle-text{
+            transform-origin: 50% 50%;
+
+        }
+        .st1{
+            transform-origin: 50% 50%;
+
+        }
+
+    }
+
+    #fab_cnt2.active{
+        animation: openCircle 2s normal;
+        transform: scale(2) rotate(0deg);
+        
+        .circle-text{
+            opacity: 1;
+            display: block;
+            animation: openCT 2s normal;
+        }
+        #path-text1{
+            animation: openCP1 2s normal;
+
+        }
+        #path-text2{
+            animation: openCP2 2s normal;
+
+        }
+        #path-text3{
+            animation: openCP3 2s normal;
+
+        }
+        
+    }
+
+
+   #fab_cnt2.inactive{
+        animation: closeCircle 2s normal;
+        transform: scale(1) rotate(-90deg);
+        //transform: scale(1);
+        .circle-text{
+            animation: closeCT 2s normal;
+            //display: none;
+            //opacity: 0;
+        }
+        #path-text1{
+            animation: cloaseCP1 2s normal;
+
+        }
+        #path-text2{
+            animation: cloaseCP2 2s normal;
+
+        }
+        #path-text3{
+            animation: cloaseCP3 2s normal;
+
+        }
+        
+    }
+
+    @keyframes openCircle {
+        0%   {
+             
+            transform: scale(1) rotate(-90deg);
+            
+            //width: 100px; 
+
+            }
+        50% {
+
+            transform: scale(0.5) rotate(-90deg);
+            
+           // height:1px;
+            //width: 1px;
+        }
+        100% {
+             
+            transform: scale(2) rotate(0deg);
+            
+            //height:300px;
+           // width: 300px;
+            }
+    }
+
+    @keyframes closeCircle {
+        0%   {
+             
+            transform: scale(2) rotate(0deg);
+            
+            //width: 100px; 
+
+            }
+        50% {
+
+            transform: scale(0.5) rotate(-90deg);
+           // height:1px;
+            //width: 1px;
+        }
+        100% {
+             
+            transform: scale(1) rotate(-90deg);
+            
+            //height:300px;
+           // width: 300px;
+            }
+    }
+
+    @keyframes openCT {
+        0%   {
+                opacity: 0; 
+                display: none;
+
+            }
+        50% {
+                opacity: 0; 
+                display: none;
+        } 
+        51% {
+                display: block;
+                opacity: 0; 
+        } 
+        100% {
+            opacity: 1; 
+            display: block;
+            }
+    }
+
+    @keyframes CloseCT {
+        0%   {
+                opacity: 1; 
+                display: block;
+    
+            }
+        50% {
+                opacity: 0; 
+                display: block;
+        }
+        1% {
+                opacity: 0; 
+                display: none;
+        }
+        100% {
+            opacity: 0; 
+            display: none;
+            }
+    }
+}
